@@ -19,5 +19,7 @@ from dishlist.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dishes/',Dishlist.as_view()),
-    path('dishes/<int:mid>',Dishitem.as_view())
+    path('dish/',DishModelList.as_view()),
+    path('dishes/<int:mid>',Dishitem.as_view()),
+    path('dish/<int:did>',DishMItem.as_view()),
 ]
